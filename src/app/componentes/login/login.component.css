@@ -1,5 +1,5 @@
 
-form {
+/* form {
     border: 10px solid #f1f1f1;
     padding: 10px;
     background:gray;
@@ -55,9 +55,10 @@ img.avatar {
 span.psw {
     float: right;
     padding-top: 16px;
-}
+} */
 
 /* Change styles for span and cancel button on extra small screens */
+/* 
 @media screen and (max-width: 300px) {
     span.psw {
        display: block;
@@ -66,4 +67,62 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
+} */
+
+.container{
+    display: flex;
+    height: 70%;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div-general {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.avatar{
+    width: 70%;
+    height: 90%;
+    
+}
+
+.imgcontainer {
+    width: 40%;
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+}
+
+.div-formulario {
+    width: 40%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.check{
+
+    margin: 10px;
+
+}
+
+.btn-info{
+    width: 100%;
+    
 }

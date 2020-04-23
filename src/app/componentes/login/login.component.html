@@ -21,7 +21,53 @@
     </div>
   </div>
 </div-->
- <div class="container" >
+
+<div class="div-general">
+  <div class="imgcontainer">
+    <img src="./assets/imagenes/login.png" alt="Avatar" class="avatar" max-width="104">
+  </div>
+  <div class="div-formulario">
+    <h1>Login</h1>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="Ingrese nombre de usuario" [(ngModel)]="usuario" name="uname" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Clave</mat-label>
+      <input matInput type="password" placeholder="Ingrese su clave" [(ngModel)]="clave" name="psw" required>
+    </mat-form-field>
+    <br>
+
+
+
+    <button class="btn-info" mat-raised-button color="primary" *ngIf="logeando"
+      (click)="MoverBarraDeProgreso()">Ingresar</button>
+
+    <div *ngIf="!logeando" class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar"
+        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho">
+        {{progresoMensaje}} - {{progreso}}%
+      </div>
+    </div>
+    <div class="check">
+      <mat-checkbox checked="checked" color="primary">Recordar mis datos</mat-checkbox>
+    </div>
+
+    <div class="container">
+      <button mat-raised-button color="warn" class="cancelbtn">Cancelar</button>
+      <button mat-raised-button color="accent" class="aceptbtn" routerLink="/Registro">Registrarse</button>
+      <span class="psw">¿Olvidaste <a href="#">tu clave?</a></span>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<!-- <div class="container" >
   <div class="jumbotron" style="padding:50px;">
     <form action="return true;">
       <div class="imgcontainer">
@@ -54,4 +100,4 @@
      
     </form>
   </div>
-</div>
+</div> -->
