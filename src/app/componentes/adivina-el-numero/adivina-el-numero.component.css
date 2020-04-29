@@ -1,12 +1,12 @@
 
 form {
-    border: 10px solid #f1f1f1;
+    border: 10px solid #27c1f0;
     padding: 10px;
-    background:gray;
+    background:rgb(212, 242, 253);
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
+    /* width: 100%; */
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -21,7 +21,15 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    /* width: 100%; */
+}
+
+h1{
+    font-weight: 700;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+    text-align: center;
 }
 
 button:hover {

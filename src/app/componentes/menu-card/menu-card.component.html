@@ -1,40 +1,98 @@
-<div class="container" >
-    <div class="card">
-      <img class="img-thumbnail"   src="./assets/imagenes/cerebro.jpg" alt="Avatar" style="width:100%">
-      <h1>Velocidad y agilidad aritmética </h1>
-      <p class="title">Juego de agilidad mental</p>
-      <p>UTN FRA </p>
-  
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('Agilidad')">Jugar</button></p>
-    
-    </div>
-  
-    <div class="card">
-      <img class="img-thumbnail" src="./assets/imagenes/ppt.jpg" alt="Avatar" style="width:100%">
-      <h1>Piedra Papel o Tijera</h1>
-      <p class="title">Juega contra la máquina</p>
-      <p>UTN FRA </p>
-      
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('PPT')">Jugar</button></p>
-    </div>
-    <div class="card">
-      <img  class="img-thumbnail"  src="./assets/imagenes/adivina.png" alt="Avatar" style="width:100%">
-      <h1>Adivina el número secreto</h1>
-      <p class="title">Juega de estrategia</p>
-      <p>UTN FRA </p>
-      
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('Adivina')">Jugar</button></p>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img height=250px src="./assets/imagenes/cerebro.jpg" alt="">
+            <div class="card-body">
+              <h2>Velocidad y Agilidad Aritmética</h2>
+              <p class="title">Juego de agilidad mental</p>
+              <div class="icons">
+                <a href="#"><i class="fa fa-dribbble"></i></a> 
+                <a href="#"><i class="fa fa-twitter"></i></a> 
+                <a href="#"><i class="fa fa-linkedin"></i></a> 
+                <a href="#"><i class="fa fa-facebook"></i></a> 
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-lg btn-success" (click)="Juego('Agilidad')">Jugar</button>
+                </div>
+                <small class="text-muted">UTN FRA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img height=250px src="./assets/imagenes/ppt.jpg" alt="game">
+            <div class="card-body">
+              <h2>Piedra papel o tijera                   </h2>
+              <p class="title">Juga contra la máquina</p>
+              <div class="icons">
+                <a href="#"><i class="fa fa-dribbble"></i></a> 
+                <a href="#"><i class="fa fa-twitter"></i></a> 
+                <a href="#"><i class="fa fa-linkedin"></i></a> 
+                <a href="#"><i class="fa fa-facebook"></i></a> 
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-lg btn-success" (click)="Juego('PPT')">Jugar</button>
+                </div>
+                <small class="text-muted">UTN FRA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img height=250px src="./assets/imagenes/adivina.png" alt="game">
+            <div class="card-body">
+              <h2>Adiviná el número secreto</h2>
+              <p class="title">Juego de estrategia</p>
+              <div class="icons">
+                <a href="#"><i class="fa fa-dribbble"></i></a> 
+                <a href="#"><i class="fa fa-twitter"></i></a> 
+                <a href="#"><i class="fa fa-linkedin"></i></a> 
+                <a href="#"><i class="fa fa-facebook"></i></a> 
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-lg btn-success" (click)="Juego('Adivina')">Jugar</button>
+                </div>
+                <small class="text-muted">UTN FRA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img height=250px src="./assets/imagenes/cerebro.jpg" alt="">
+            <div class="card-body">
+              <h2>Velocidad y Agilidad Aritmética</h2>
+              <p class="title">Juego de agilidad mental</p>
+              <div class="icons">
+                <a href="#"><i class="fa fa-dribbble"></i></a> 
+                <a href="#"><i class="fa fa-twitter"></i></a> 
+                <a href="#"><i class="fa fa-linkedin"></i></a> 
+                <a href="#"><i class="fa fa-facebook"></i></a> 
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success" (click)="Juego('Agilidad')">Jugar</button>
+                </div>
+                <small class="text-muted">UTN FRA</small>
+              </div>
+            </div>
+          </div>
+        </div> -->
     </div>
   </div>
+</div>
+
+
+
+
