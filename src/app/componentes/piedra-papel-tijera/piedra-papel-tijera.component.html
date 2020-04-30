@@ -14,19 +14,17 @@
                             <form action="" name="juego" method="">
 
                                 <div class="player-menu btn-group-lg form-group row">
-                                    <button class="btn btn-default btn-outline-primary btn-lg"
-                                        value="Piedra" name="Piedra"
-                                        (click)="NuevoJuego('Piedra')"><i class="fa fa-hand-rock-o"></i>
+                                    <button class="btn btn-default btn-outline-primary btn-lg" value="Piedra"
+                                        name="Piedra" (click)="NuevoJuego('Piedra')"><i class="fa fa-hand-rock-o"></i>
                                     </button>
 
-                                    <button class="btn btn-default btn-outline-danger btn-lg"
-                                        value="Papel" name="Papel"
+                                    <button class="btn btn-default btn-outline-danger btn-lg" value="Papel" name="Papel"
                                         (click)="NuevoJuego('Papel')"><i class="fa fa-hand-paper-o"></i>
                                     </button>
 
-                                    <button class="btn btn-default btn-outline-warning btn-lg"
-                                        value="Tijera" name="Tijera"
-                                        (click)="NuevoJuego('Tijera')"><i class="fa fa-hand-scissors-o"></i>
+                                    <button class="btn btn-default btn-outline-warning btn-lg" value="Tijera"
+                                        name="Tijera" (click)="NuevoJuego('Tijera')"><i
+                                            class="fa fa-hand-scissors-o"></i>
                                     </button>
                                 </div>
 
@@ -43,7 +41,43 @@
 
     </main>
 
-    <div *ngIf="winner">
+
+
+
+    <div class="login-form container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card card-body">
+                    <div class="row boxResult">
+                        <div *ngIf="winner">
+                            <h2>
+                                ¡Ganaste!
+                            </h2>
+                            <h3>Elegiste {{nuevoJuego.eleccionHumano}} y la PC eligió {{nuevoJuego.eleccionPC}}</h3>
+                        </div>
+
+                        <div *ngIf="loser">
+                            <h2>
+                                ¡Perdiste!
+                            </h2>
+                            <h3>Elegiste {{nuevoJuego.eleccionHumano}} y la PC eligió {{nuevoJuego.eleccionPC}}</h3>
+                        </div>
+
+                        <div *ngIf="tie">
+                            <h2>
+                                ¡Empataste!
+                            </h2>
+                            <h3>Elegiste {{nuevoJuego.eleccionHumano}} y la PC eligió {{nuevoJuego.eleccionPC}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div *ngIf="winner">
         <h3>
             Ganaste! Elegiste {{nuevoJuego.eleccionHumano}} y la PC eligió {{nuevoJuego.eleccionPC}}
         </h3>
@@ -59,7 +93,7 @@
         <h3>
             Empataste! Elegiste {{nuevoJuego.eleccionHumano}} y la PC eligió {{nuevoJuego.eleccionPC}}
         </h3>
-    </div>
+    </div> -->
 
 
 

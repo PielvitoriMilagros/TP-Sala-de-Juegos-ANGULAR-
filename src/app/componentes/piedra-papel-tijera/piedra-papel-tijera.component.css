@@ -1,11 +1,3 @@
-  .oponent-window,
-  .player-window {
-    font-size: 15rem;
-    text-align: center;
-  }  
-  .main-content { background: none;}
-
-
 .subtitle{
     color: royalblue;
 }
@@ -25,27 +17,6 @@
     background-color: #f5f8fa;
 }
 
-.navbar-laravel
-{
-    box-shadow: 0 2px 4px rgba(0,0,0,.04);
-}
-
-.navbar-brand , .nav-link, .my-form, .login-form
-{
-    font-family: Raleway, sans-serif;
-}
-
-.my-form
-{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-.my-form .row
-{
-    margin-left: 0;
-    margin-right: 0;
-}
 
 .login-form
 {
@@ -57,4 +28,9 @@
 {
     margin-left: 0;
     margin-right: 0;
+}
+
+.boxResult{
+    text-align: center;
+    align-items: center;
 }
