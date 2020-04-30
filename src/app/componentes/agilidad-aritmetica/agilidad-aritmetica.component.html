@@ -2,7 +2,7 @@
 <!--app-menu></app-menu-->
 <!-- index.html -->
 
-
+<!-- 
 <form name="juego">
 <ul>
    <li>
@@ -36,3 +36,105 @@
 </ul>
 
 </form>
+ -->
+
+<!doctype html>
+<html lang="en">
+
+
+<body>
+
+  <main class="login-form">
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header" style="text-align: center;">
+              <h2>Agilidad Aritmética</h2>
+            </div>
+            <div class="card-body">
+              <form action="" name="juego" method="">
+
+                <div class="form-group row">
+                  <label for="primerNumero" class="col-md-4 col-form-label text-md-right">Primer número:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="primerNumero" [(ngModel)]="nuevoJuego.primerNumero" class="form-control"
+                      placeholder="Primer Número" name="primerNumero" style="width:50%" readonly />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="operador" class="col-md-4 col-form-label text-md-right">Operador:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="operador" [(ngModel)]="nuevoJuego.operador" class="form-control"
+                      placeholder="Operador" name="operador" style="width:50%" readonly />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="segundoNumero" class="col-md-4 col-form-label text-md-right">Segundo número:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="segundoNumero" [(ngModel)]="nuevoJuego.segundoNumero" class="form-control"
+                      placeholder="Segundo Número" name="segundoNumero" style="width:50%" readonly />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="respuesta" class="col-md-4 col-form-label text-md-right">Respuesta:</label>
+                  <div class="col-md-6">
+                    <input type="text" id="respuesta" [(ngModel)]="nuevoJuego.numeroIngresado" class="form-control"
+                      placeholder="Ingrese resultado" name="respuesta" style="width:50%" />
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <!-- <label for="respuesta" class="col-md-4 col-form-label text-md-right">Respuesta:</label> -->
+                  <div class="col-md-6 offset-md-4">
+                    <h2 [hidden]="ocultarVerificar"><button (click)="verificar()" class="btn btn-success btn-lg"
+                        disabled>Verificar {{Tiempo}} </button></h2>
+                    <h2 [hidden]="!ocultarVerificar"><button (click)="NuevoJuego()"
+                        class="btn btn-info btn-lg">Nuevo</button></h2>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-6 offset-md-4">
+                    <h2 [hidden]="ocultarVerificar">
+                      <p><i class="spinner-border text-primary"></i>Esperando numero...</p>
+                    </h2>
+                  </div>
+                </div>
+
+
+                <div *ngIf="winner"  class="form-group row">
+                  <div class="col-md-6 offset-md-4">
+                      <h2>Ganaste!</h2>
+                  </div>
+                </div>
+
+                <div *ngIf="loser" class="form-group row">
+                  <div class="col-md-6 offset-md-4">
+                    <h2>Perdiste!</h2>
+                  </div>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+
+
+
+</body>
+
+</html>
