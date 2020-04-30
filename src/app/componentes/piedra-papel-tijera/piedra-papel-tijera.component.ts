@@ -22,8 +22,8 @@ export class PiedraPapelTijeraComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  NuevoJuego(){
-    this.nuevoJuego.generarJuegoPC();
+  NuevoJuego(value:any){
+    this.nuevoJuego.generarJuegoPC(value);
     this.winner=false;
     this.loser = false;
     this.tie = false;

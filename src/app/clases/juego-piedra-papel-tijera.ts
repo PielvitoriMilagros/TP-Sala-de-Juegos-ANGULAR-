@@ -23,12 +23,13 @@ export class JuegoPiedraPapelTijera extends Juego {
 
 
 
-    public generarJuegoPC() {
+    public generarJuegoPC(value:any) {
         var aleatorio: number;
+        this.eleccionHumano=value;
         aleatorio = Math.floor(Math.random() * (this.eleccionesPC.length));
         this.eleccionPC = this.eleccionesPC[aleatorio]
 
-        console.info('Elección PC: ' + this.eleccionPC);
+        console.info('Elección PC: ' + this.eleccionPC + 'Elección Humano: ' + this.eleccionHumano);
         this.gano = false;
     }
 
