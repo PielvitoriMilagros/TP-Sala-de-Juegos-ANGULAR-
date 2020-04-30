@@ -99,6 +99,9 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
+import { SimonComponent } from './componentes/simon/simon.component';
 
 @NgModule({
   declarations: [
@@ -124,7 +127,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
-    SexoPipe
+    SexoPipe,
+    PiedraPapelTijeraComponent,
+    TaTeTiComponent,
+    SimonComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,10 @@ import { QuienSoyComponent } from '../componentes/quien-soy/quien-soy.component'
 import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/listado-de-paises.component'
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
+import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
+import { TaTeTiComponent } from '../componentes/ta-te-ti/ta-te-ti.component';
+import { SimonComponent } from '../componentes/simon/simon.component';
 
 
 // declaro donde quiero que se dirija
@@ -42,7 +46,11 @@ children:
      {path: 'Adivina' , component: AdivinaElNumeroComponent},
       {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-      {path: 'Agilidad' , component: AgilidadAritmeticaComponent}]
+      {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
+      {path: 'Anagrama' , component: AnagramaComponent},
+      {path: 'Tateti' , component: TaTeTiComponent},
+      {path: 'Simon' , component: SimonComponent},
+      {path: 'PiedraPapelTijera' , component: PiedraPapelTijeraComponent}]
 },
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];

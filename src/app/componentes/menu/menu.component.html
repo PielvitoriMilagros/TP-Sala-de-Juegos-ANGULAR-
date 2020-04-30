@@ -30,67 +30,35 @@
 
 
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="./">Sala de Juegos</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menú de Juegos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" (click)="Juego('Adivina')">Adivina</a>
-            <a class="dropdown-item" (click)="Juego('Agilidad')">Agilidad</a>
-            <a class="dropdown-item" (click)="Juego('AdivinaMasListado')">Adivina+listado</a>
-            <a class="dropdown-item" (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="./Juegos">A Menú de Juegos</a>
-            <a class="dropdown-item" href="#">Salir</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="./">Sala de Juegos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-                                  
-          </button>
-          <a class="navbar-brand" routerLink="/Principal">Inicio</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Menú de Juegos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" (click)="Juego('Adivina')">Adivina</a>
+          <a class="dropdown-item" (click)="Juego('PPT')">Piedra papel o tijera</a>
+          <a class="dropdown-item" (click)="Juego('Agilidad')">Agilidad</a>
+          <a class="dropdown-item" (click)="Juego('Anagrama')">Anagrama</a>
+          <a class="dropdown-item" (click)="Juego('Tateti')">TA-TE-TI</a>
+          <a class="dropdown-item" (click)="Juego('Simon')">Simon</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" (click)="Juego('AdivinaMasListado')">Adivina+listado</a>
+          <a class="dropdown-item" (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="./Juegos">A Menú de Juegos</a>
+          <a class="dropdown-item" href="#">Salir</a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a routerLink="/Juegos">Menú de Juegos</a></li>
-                <li><a data-toggle="tooltip" title="Hooray!" (click)="Juego('Adivina')">Adivina</a></li>
-                <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
-                <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
-                <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
-                  <li><a href="/Login"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
-                </ul>
-        </div>
-      </div>
-    </nav> -->
-      
-   
+      </li>
+    </ul>
+  </div>
+</nav>
