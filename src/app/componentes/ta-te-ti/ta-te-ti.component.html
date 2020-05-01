@@ -1,1 +1,81 @@
-<p>ta-te-ti works!</p>
+<!doctype html>
+<html lang="en">
+
+
+<body>
+
+    <main class="login-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" style="text-align: center;">
+                            <div class="col-xs-11 h1"> TA - TE - TI</div>
+                        </div>
+                        <div class="card-body">
+
+                            <div *ngIf="winner">
+                                <div class="col-xs-11 h3 subtitle" style="text-align: center;">
+                                    Ganaste {{nuevoJuego.quienGana}} !!
+                                    <div style="text-align: center">
+                                        <button class="btn btn-lg btn-outline-primary"
+                                            (click)="NuevoJuego()">Reiniciar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="tie">
+                                <div class="col-xs-11 h3 subtitle" style="text-align: center;">
+                                    ¡Empate!
+                                    <div style="text-align: center">
+                                        <button class="btn btn-lg btn-outline-primary"
+                                            (click)="NuevoJuego()">Reiniciar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div [hidden]="tie">
+                                <div [hidden]="winner">
+                                    <div class="col-xs-11 h3 subtitle" style="text-align: center;">
+                                        Jugador {{nuevoJuego.jugadores}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form action="" name="juego" method="">
+
+                                <div style="text-align: center">
+                                    <button mat-raised-button (click)="presion(0,0)"
+                                        class="casilla">{{nuevoJuego.posiciones[0][0]}}</button>
+                                    <button mat-raised-button (click)="presion(0,1)"
+                                        class="casilla">{{nuevoJuego.posiciones[0][1]}}</button>
+                                    <button mat-raised-button (click)="presion(0,2)"
+                                        class="casilla">{{nuevoJuego.posiciones[0][2]}}</button>
+                                    <br>
+                                    <button mat-raised-button (click)="presion(1,0)"
+                                        class="casilla">{{nuevoJuego.posiciones[1][0]}}</button>
+                                    <button mat-raised-button (click)="presion(1,1)"
+                                        class="casilla">{{nuevoJuego.posiciones[1][1]}}</button>
+                                    <button mat-raised-button (click)="presion(1,2)"
+                                        class="casilla">{{nuevoJuego.posiciones[1][2]}}</button>
+                                    <br>
+                                    <button mat-raised-button (click)="presion(2,0)"
+                                        class="casilla">{{nuevoJuego.posiciones[2][0]}}</button>
+                                    <button mat-raised-button (click)="presion(2,1)"
+                                        class="casilla">{{nuevoJuego.posiciones[2][1]}}</button>
+                                    <button mat-raised-button (click)="presion(2,2)"
+                                        class="casilla">{{nuevoJuego.posiciones[2][2]}}</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
