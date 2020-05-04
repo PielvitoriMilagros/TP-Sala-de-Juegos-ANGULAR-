@@ -18,7 +18,7 @@ export class JuegoPropioComponent implements OnInit {
   help: boolean = false;
   winner: boolean;
   loser: boolean;
-  tablaAyudas:TablaHelp[]=[];
+  tablaAyudas: TablaHelp[] = [];
 
 
   constructor() {
@@ -32,10 +32,10 @@ export class JuegoPropioComponent implements OnInit {
     this.contador = 0;
     this.started = true;
     this.winner = false;
-    this.loser=false;
-    this.help= false;
+    this.loser = false;
+    this.help = false;
     this.ocultarVerificar = false;
-    this.tablaAyudas=[];
+    this.tablaAyudas = [];
   }
 
   verificar(color: string) {
@@ -49,21 +49,22 @@ export class JuegoPropioComponent implements OnInit {
       this.ocultarVerificar = true;
 
       if (this.nuevoJuego.verificarJugada()) {
-        this.help=false;
+        this.help = false;
         this.started = false;
         this.winner = true;
       } else {
         if (this.nuevoJuego.intentos == 0) {
           this.help = false;
-          this.started=false;
+          this.started = false;
           this.loser = true;
         }
-        else
-        this.tablaAyudas.push({'intentos':this.nuevoJuego.intentos,'eleccion':this.nuevoJuego.secuenciaHumano.toString(),'mensaje':this.nuevoJuego.correctas.toString()});
+        else {
+          this.tablaAyudas.push({ 'intentos': this.nuevoJuego.intentos, 'eleccion': this.nuevoJuego.secuenciaHumano.toString(), 'mensaje': this.nuevoJuego.correctas.toString() });
           this.ocultarVerificar = false;
-        this.help = true;
-        this.loser=false;
-        this.winner=false;
+          this.help = true;
+          this.loser = false;
+          this.winner = false;
+        }
       }
 
       this.contador = 0;
