@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+
+<body>
+
+    <main class="login-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" style="text-align: center;">
+                            <div class="col-xs-11 h1">Adivina la secuencia escondida</div>
+                        </div>
+                        <div class="card-body">
+                            <form action="" name="juego" method="">
+
+                                <div [hidden]="started" class="btn-container">
+                                    <div class="form-group row">
+                                        <div class="col-md-6 offset-md-4">
+                                            <h2><button (click)="NuevoJuego()" class="btn btn-info btn-lg">Nuevo
+                                                    Juego</button></h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div [hidden]="!started" class="game-container">
+                                    <div class="form-group row">
+                                        <div class="col-md-6 game-container">
+                                            <div class="xs-11 subtitle" style="text-align: center;">
+                                                <img src="../../../assets/imagenes/qtag.png" alt="?">
+                                                <img src="../../../assets/imagenes/qtag.png" alt="?">
+                                                <img src="../../../assets/imagenes/qtag.png" alt="?">
+                                                <img src="../../../assets/imagenes/qtag.png" alt="?">
+                                            </div>
+
+                                            <button class="btn btn-danger btn-lg" (click)="verificar('Rojo')"> Rojo
+                                            </button>
+                                            <button class="btn btn-success btn-lg" (click)="verificar('Verde')"> Verde
+                                            </button>
+                                            <button class="btn btn-warning btn-lg" (click)="verificar('Amarillo')">
+                                                Amarillo </button>
+                                            <button class="btn btn-primary btn-lg" (click)="verificar('Azul')"> Azul
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <h2 [hidden]="ocultarVerificar">
+                                            <p><i class="spinner-border text-primary"></i>Esperando respuesta...</p>
+                                        </h2>
+                                    </div>
+                                </div>
+
+
+                                <div *ngIf="winner" class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <h2>Ganaste!
+                                            La secuencia era {{nuevoJuego.secuenciasPC}}
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div *ngIf="loser" class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <h2>¡¡Perdiste!!</h2>
+                                        <h3>La secuencia correcta era {{nuevoJuego.secuenciasPC}}</h3>
+                                    </div>
+                                </div>
+
+                                <div *ngIf="help" class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Intentos</th>
+                                                    <th scope="col">Secuencia Elegida</th>
+                                                    <th scope="col">Colores correctos</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let item of tablaAyudas">
+                                                    <th scope="row">{{item.intentos}}</th>
+                                                    <td>{{item.eleccion}}</td>
+                                                    <td>{{item.mensaje}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- <h2>NO! Pusiste {{nuevoJuego.correctas}} colores en su posición correcta</h2>
+                        <h3>Te quedan {{nuevoJuego.intentos}} intentos</h3> -->
+                                    </div>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+</body>
+
+</html>

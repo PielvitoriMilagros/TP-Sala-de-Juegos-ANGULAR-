@@ -101,7 +101,8 @@ import { SexoPipe } from './pipes/sexo.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
-import { SimonComponent } from './componentes/simon/simon.component';
+import { JuegoPropioComponent } from './componentes/juego-propio/juego-propio.component';
+
 
 @NgModule({
   declarations: [
@@ -130,7 +131,7 @@ import { SimonComponent } from './componentes/simon/simon.component';
     SexoPipe,
     PiedraPapelTijeraComponent,
     TaTeTiComponent,
-    SimonComponent
+    JuegoPropioComponent
   ],
   imports: [
     BrowserModule,

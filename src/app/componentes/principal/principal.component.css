@@ -5,6 +5,14 @@ height: 130px;
 }
 
 
+.back{
+    background: url(../../../assets/imagenes/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .container{
     display: flex;
     align-items: center;
@@ -46,4 +54,9 @@ h3{
     margin: 15px;
     align-content: center;
     align-items: center;
+}
+
+p{
+    color: rgb(17, 22, 83);
+font-size: 16px;
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SimonComponent } from './simon.component';
+import { JuegoPropioComponent } from './juego-propio.component';
 
-describe('SimonComponent', () => {
-  let component: SimonComponent;
-  let fixture: ComponentFixture<SimonComponent>;
+describe('JuegoPropioComponent', () => {
+  let component: JuegoPropioComponent;
+  let fixture: ComponentFixture<JuegoPropioComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimonComponent ]
+      declarations: [ JuegoPropioComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimonComponent);
+    fixture = TestBed.createComponent(JuegoPropioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

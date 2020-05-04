@@ -11,3 +11,10 @@
 .btn{
     margin-top: 8px;
 }
+
+body{
+    background: url(../../../assets/imagenes/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
