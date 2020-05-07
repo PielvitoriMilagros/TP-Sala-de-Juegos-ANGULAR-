@@ -22,11 +22,19 @@
         <h1 style="text-align: center;">Nuevo Usuario</h1>
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
-          <input matInput type="text" placeholder="Ingrese correo" name="email" required>
+          <input matInput type="text" placeholder="Ingrese correo" [(ngModel)]="jugadorNuevo.usuario" name="email" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Sexo</mat-label>
+          <input matInput type="text" placeholder="Ingrese sexo" [(ngModel)]="jugadorNuevo.sexo" name="sexo" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Cuit</mat-label>
+          <input matInput type="text" placeholder="Ingrese cuit" [(ngModel)]="jugadorNuevo.cuit" name="cuit" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Clave</mat-label>
-          <input matInput type="password" placeholder="Ingrese la clave" name="psw" required>
+          <input matInput type="password" placeholder="Ingrese la clave" [(ngModel)]="jugadorNuevo.clave" name="psw" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Repita la clave</mat-label>
@@ -40,7 +48,7 @@
         <div class="clearfix">
           <button type="button" mat-raised-button onclick="document.getElementById('id01').style.display='none'" 
             class="cancelbtn">Cancelar</button>
-          <button type="submit" mat-raised-button class="signupbtn">Registrarme</button>
+          <button type="submit" mat-raised-button class="signupbtn" (click)="registrarJugador()">Registrarme</button>
         </div>
       </div>
     </div>

@@ -11,9 +11,12 @@
   <ul class="nav navbar-nav navbar-right">
           <!-- <li><a routerLink="/Registro"><span class="glyphicon glyphicon-user"></span>Registrarse</a></li>
           <li><a  routerLink="/Login"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li> -->
-
+          <div *ngIf="hayJugadorActivo">
+                    <button mat-raised-button (click)="desactivarJugador()" color="primary">Salir</button>
+                  </div>
+<div *ngIf="!hayJugadorActivo">
           <button mat-raised-button routerLink="/Registro" color="primary">Registrase</button>
           <button mat-raised-button routerLink="/Login" color="primary">Ingresar</button>
-
+        </div>
   </ul>
 </div>

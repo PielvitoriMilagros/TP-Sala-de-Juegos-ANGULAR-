@@ -1,0 +1,9 @@
+.botonera{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    width: 40%;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 20px;
+}

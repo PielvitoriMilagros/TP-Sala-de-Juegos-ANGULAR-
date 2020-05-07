@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { JugadoresService } from '../../servicios/jugadores.service';
+import { Jugador } from '../../clases/jugador';
+
 
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
@@ -22,7 +25,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private miServicio:JugadoresService) {
       this.progreso=0;
       this.ProgresoDeAncho="0%";
 
@@ -32,10 +36,20 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
-      this.router.navigate(['/Principal']);
+    let jugadores = this.miServicio.obtenerJugadores();
+    for(let jugador of jugadores){
+      if(this.usuario == jugador.usuario && this.clave==jugador.clave){
+        this.miServicio.activarJugador(jugador);
+        this.router.navigate(['/Principal']);
+      }
     }
+    // if (this.usuario === 'admin' && this.clave === 'admin') {
+    //   this.router.navigate(['/Principal']);
+    // }
   }
+
+
+
   MoverBarraDeProgreso() {
     
     this.logeando=false;

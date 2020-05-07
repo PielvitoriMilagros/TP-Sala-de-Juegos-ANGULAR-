@@ -25,6 +25,7 @@ import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/p
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { TaTeTiComponent } from '../componentes/ta-te-ti/ta-te-ti.component';
 import { JuegoPropioComponent } from '../componentes/juego-propio/juego-propio.component';
+import { LogueoGuard } from '../guard/logueo.guard';
 
 
 // declaro donde quiero que se dirija
@@ -41,6 +42,7 @@ const MiRuteo = [
 
 { path: 'Juegos' ,
 component: JuegosComponent ,
+canActivate: [LogueoGuard],
 children:
      [{path: '' , component: MenuCardComponent},
      {path: 'Adivina' , component: AdivinaElNumeroComponent},
