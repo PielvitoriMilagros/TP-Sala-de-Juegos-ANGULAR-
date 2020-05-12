@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { JuegoPropio } from '../../clases/juego-propio';
 import { TablaHelp } from '../../clases/tabla-help';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
+import { JugadoresService } from '../../servicios/jugadores.service';
+import { Jugador } from '../../clases/jugador';
 
 @Component({
   selector: 'app-juego-propio',
@@ -20,8 +23,11 @@ export class JuegoPropioComponent implements OnInit {
   loser: boolean;
   tablaAyudas: TablaHelp[] = [];
 
+  listadoDeJuegos;
+  jugadorActivo:Jugador;
 
-  constructor() {
+
+  constructor(private misJuegos:JuegoServiceService,private misJugadores:JugadoresService) {
     this.nuevoJuego = new JuegoPropio();
     // console.info("numero Secreto:",this.nuevoJuego.numeroSecreto);  
     this.ocultarVerificar = true;
@@ -69,10 +75,19 @@ export class JuegoPropioComponent implements OnInit {
 
       this.contador = 0;
     }
+if(this.nuevoJuego.intentos==0 || this.winner==true){
+  this.nuevoJuego.jugador=this.jugadorActivo.usuario;
+  this.nuevoJuego.gano = this.nuevoJuego.verificarJugada();
+
+  this.misJuegos.altaJuego(this.nuevoJuego);
+
+}
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.listadoDeJuegos=this.misJuegos.obtenerJuegos();
+    this.jugadorActivo=this.misJugadores.obtenerJugadorActivo();
   }
 
 }

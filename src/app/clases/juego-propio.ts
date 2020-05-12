@@ -5,7 +5,7 @@ export class JuegoPropio extends Juego{
 
     // Juego
     constructor(nombre?: string, gano?: boolean, jugador?:string) {
-        super("Adivina el número",gano,jugador);
+        super("MasterMind",gano,jugador);
     
       }
     public verificar() {

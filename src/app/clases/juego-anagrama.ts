@@ -15,12 +15,12 @@ export class JuegoAnagrama extends Juego{
 
     //Clase Juego
     constructor(nombre?: string, gano?: boolean, jugador?: string) {
-        super("Adivina el animal", gano, jugador);
+        super("Anagrama", gano, jugador);
 
     }
 
     public verificar() {
-        if (this.respuesta.toUpperCase() == this.correcta) {
+        if (this.respuesta != undefined && this.respuesta.toUpperCase() == this.correcta) {
             this.gano = true;
         }
         if (this.gano) {

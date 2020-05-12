@@ -1,6 +1,9 @@
 
 import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
 import { JuegoAdivina } from '../../clases/juego-adivina'
+import { JuegoServiceService } from '../../servicios/juego-service.service';
+import { JugadoresService } from '../../servicios/jugadores.service';
+import { Jugador } from '../../clases/jugador';
 
 @Component({
   selector: 'app-adivina-el-numero',
@@ -14,8 +17,10 @@ export class AdivinaElNumeroComponent implements OnInit {
   Mensajes:string;
   contador:number;
   ocultarVerificar:boolean;
+  listadoDeJuegos;
+  jugadorActivo:Jugador;
  
-  constructor() { 
+  constructor(private misJuegos:JuegoServiceService,private misJugadores:JugadoresService) { 
     this.nuevoJuego = new JuegoAdivina();
     console.info("numero Secreto:",this.nuevoJuego.numeroSecreto);  
     this.ocultarVerificar=false;
@@ -67,6 +72,11 @@ export class AdivinaElNumeroComponent implements OnInit {
 
     }
     console.info("numero Secreto:",this.nuevoJuego.gano);  
+
+    this.nuevoJuego.jugador=this.jugadorActivo.usuario;
+    this.nuevoJuego.gano = this.nuevoJuego.verificar();
+
+    this.misJuegos.altaJuego(this.nuevoJuego);
   }  
 
   MostarMensaje(mensaje:string="este es el mensaje",ganador:boolean=false) {
@@ -87,6 +97,10 @@ export class AdivinaElNumeroComponent implements OnInit {
   
    }  
   ngOnInit() {
+
+    this.listadoDeJuegos=this.misJuegos.obtenerJuegos();
+    this.jugadorActivo=this.misJugadores.obtenerJugadorActivo();
+
   }
 
 }

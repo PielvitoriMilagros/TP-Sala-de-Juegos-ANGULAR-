@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JugadoresService } from '../../servicios/jugadores.service';
 import { Jugador } from '../../clases/jugador';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-cabecera',
@@ -11,11 +12,10 @@ export class CabeceraComponent implements OnInit {
 
   hayJugadorActivo = false;
 
-  constructor(private miServicio: JugadoresService) { }
+  constructor(private miServicio: JugadoresService, private misJuegos:JuegoServiceService) { }
 
   ngOnInit() {
     let retorno = this.miServicio.obtenerJugadorActivo();
-    console.log(retorno);
     if (this.miServicio.obtenerJugadorActivo() === null)
       this.hayJugadorActivo = false;
     else

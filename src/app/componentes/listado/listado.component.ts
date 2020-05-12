@@ -7,27 +7,39 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-  public listadoParaCompartir: Array<any>;
-   miServicioJuego:JuegoServiceService
+  // public listadoParaCompartir: Array<any>;
+  //  miServicioJuego:JuegoServiceService
 
-  constructor(servicioJuego:JuegoServiceService) {
-    this.miServicioJuego = servicioJuego;
+  // constructor(servicioJuego:JuegoServiceService) {
+  //   this.miServicioJuego = servicioJuego;
     
-  }
+  // }
+
+  listadoParaCompartir:any;
   
+  constructor(private misJuegos:JuegoServiceService) {
+
+    this.listadoParaCompartir = misJuegos.obtenerJuegos();
+    console.log(this.listadoParaCompartir);
+
+   }
+
+
+
+
   ngOnInit() {
     
   }
 
-  llamaService(){
-    console.log("llamaService");
-    this.listadoParaCompartir= this.miServicioJuego.listar();
-  }
+  // llamaService(){
+  //   console.log("llamaService");
+  //   this.listadoParaCompartir= this.miServicioJuego.listar();
+  // }
 
-  llamaServicePromesa(){
-    console.log("llamaServicePromesa");
-    this.miServicioJuego.listarPromesa().then((listado) => {
-        this.listadoParaCompartir = listado;
-    });
-  }
+  // llamaServicePromesa(){
+  //   console.log("llamaServicePromesa");
+  //   this.miServicioJuego.listarPromesa().then((listado) => {
+  //       this.listadoParaCompartir = listado;
+  //   });
+  // }
 }

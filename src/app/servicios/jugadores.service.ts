@@ -63,6 +63,7 @@ altaJugador(jugadorNuevo:Jugador){
   let ultimoJugador = listado[listado.length - 1];
   let ultimoId = ultimoJugador.id;
   jugadorNuevo.id=ultimoId+1;
+  jugadorNuevo.gano=false;
   listado.push(jugadorNuevo);
   localStorage.setItem('jugadores',JSON.stringify(listado));
 

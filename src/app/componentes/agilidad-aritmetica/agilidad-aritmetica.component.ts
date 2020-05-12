@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 import { JuegoAgilidad } from '../../clases/juego-agilidad'
+import { JuegoServiceService } from '../../servicios/juego-service.service';
+import { JugadoresService } from '../../servicios/jugadores.service';
+import { Jugador } from '../../clases/jugador';
 
 import { Subscription } from "rxjs";
 import { TimerObservable } from "rxjs/observable/TimerObservable";
@@ -19,9 +22,14 @@ export class AgilidadAritmeticaComponent implements OnInit {
   loser:boolean=false;
   private subscription: Subscription;
 
+  listadoDeJuegos;
+  jugadorActivo:Jugador;
+
   ngOnInit() {
+    this.listadoDeJuegos=this.misJuegos.obtenerJuegos();
+    this.jugadorActivo=this.misJugadores.obtenerJugadorActivo();
   }
-  constructor() {
+  constructor(private misJuegos:JuegoServiceService,private misJugadores:JugadoresService) {
     this.ocultarVerificar = true;
     this.Tiempo = 5;
     this.nuevoJuego = new JuegoAgilidad();
@@ -54,7 +62,11 @@ export class AgilidadAritmeticaComponent implements OnInit {
     } else{
       this.MostrarMensaje(false);
     }
+    
+    this.nuevoJuego.jugador=this.jugadorActivo.usuario;
+    this.nuevoJuego.gano = this.nuevoJuego.verificar();
 
+    this.misJuegos.altaJuego(this.nuevoJuego);
 
 
   }

@@ -13,7 +13,7 @@ export class JuegoAgilidad extends Juego {
 
     //Clase Juego
     constructor(nombre?: string, gano?: boolean, jugador?: string) {
-        super("Adivina el número", gano, jugador);
+        super("Agilidad aritmética", gano, jugador);
 
     }
 

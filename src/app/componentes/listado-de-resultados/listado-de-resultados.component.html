@@ -6,6 +6,27 @@
 </div-->
 
 <table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Juego</th>
+      <th>Jugador</th>
+      <th>Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let juego of listado" >
+      <td>{{juego.nombre}} </td>
+      <td>{{juego.jugador}} </td> 
+      <td>{{juego.gano}} </td> 
+      
+    </tr>
+   
+  </tbody>
+</table>
+
+
+<!-- 
+<table class="table table-condensed">
     <thead>
       <tr>
         <th>Juego</th>
@@ -22,4 +43,4 @@
       </tr>
      
     </tbody>
-  </table>
+  </table> -->

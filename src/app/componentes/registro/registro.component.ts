@@ -25,6 +25,7 @@ export class RegistroComponent implements OnInit {
   }
 
   registrarJugador(){
+    if(this.jugadorNuevo.usuario != null && this.jugadorNuevo.clave!= null)
     this.miServicio.altaJugador(this.jugadorNuevo);
 
   }

@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   private subscription: Subscription;
   usuario = '';
   clave= '';
+  errorLogin=false;
   progreso: number;
   progresoMensaje="esperando..."; 
   logeando=true;
@@ -37,12 +38,18 @@ export class LoginComponent implements OnInit {
 
   Entrar() {
     let jugadores = this.miServicio.obtenerJugadores();
+    let flag=false;
     for(let jugador of jugadores){
       if(this.usuario == jugador.usuario && this.clave==jugador.clave){
+        flag=true;
         this.miServicio.activarJugador(jugador);
         this.router.navigate(['/Principal']);
       }
     }
+    if(flag)
+    this.errorLogin=false;
+    else
+    this.errorLogin=true;
     // if (this.usuario === 'admin' && this.clave === 'admin') {
     //   this.router.navigate(['/Principal']);
     // }
