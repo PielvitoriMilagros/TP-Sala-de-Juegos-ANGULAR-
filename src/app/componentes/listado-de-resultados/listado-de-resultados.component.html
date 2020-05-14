@@ -17,7 +17,10 @@
     <tr *ngFor="let juego of listado" >
       <td>{{juego.nombre}} </td>
       <td>{{juego.jugador}} </td> 
-      <td>{{juego.gano}} </td> 
+      <!-- <td>{{juego.gano}} </td>  -->
+      <td *ngIf="juego.gano==null" class="table-warning">Empate</td>
+      <td *ngIf="juego.gano==true" class="table-success">Ganador</td>
+      <td *ngIf="juego.gano==false" class="table-danger">Perdedor</td>
       
     </tr>
    
